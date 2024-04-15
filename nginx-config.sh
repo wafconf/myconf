@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # URL ke raw file di GitHub
-FILE_URL1="https://raw.githubusercontent.com/username/repo/main/path/to/block-user-agent.conf"
-FILE_URL2="https://raw.githubusercontent.com/username/repo/main/path/to/bad-referrer.conf"
+FILE_URL1="https://raw.githubusercontent.com/wafconf/myconf/main/block-user-agent.conf"
+FILE_URL2="https://raw.githubusercontent.com/wafconf/myconf/main/bad-referrer.conf"
 
 # Lokasi di mana file akan disimpan
 DESTINATION1="/etc/nginx/block-user-agent.conf"
