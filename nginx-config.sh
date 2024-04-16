@@ -27,7 +27,7 @@ echo "block0bad-referrer.rules has been downloaded and saved to $DESTINATION2."
 cp $NGINX_CONF "${NGINX_CONF}.bak"
 
 # Menambahkan map block ke nginx.conf dalam blok http
-sed -i '/http {/ a \\n    # Map blocks\n  include /etc/nginx/block-user-agent.conf;\n  \n\n  include /etc/nginx/block-bad-referrer.conf;\n \n' $NGINX_CONF
+sed -i '/http {/ a \\n    # Map blocks\n  include /etc/nginx/block-user-agent.rules;\n  \n\n  include /etc/nginx/block-bad-referrer.rules;\n \n' $NGINX_CONF
 
 # Memeriksa dan mengulang konfigurasi nginx untuk memastikan tidak ada kesalahan
 nginx -t && systemctl reload nginx
