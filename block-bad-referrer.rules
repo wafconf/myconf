@@ -1,7 +1,17 @@
+###	SETTINGS: 
+### ---------------------------------------------
+###	0 = allowed - no limits
+###	1 = allowed or rate limited less restrictive
+###	2 = rate limited more
+###	3 = block completely
+### ---------------------------------------------
+
 # As you can see in the examples below the domain "someveryveryrandomwebsitenamethatdoesnotexist1\.com" 
 # is entered with a preceding (?:\b) and an ending (?:\b)
 # this makes it now "(?:\b)someveryveryrandomwebsitenamethatdoesnotexist1\.com(?:\b)". 
 # It is crucial to use the word boundaries regex formatting. 
+
+
 map $http_referer $bad_referer {
 	"~*(?:\b)000free\.us(?:\b)" 	1;
 	"~*(?:\b)007angels\.com(?:\b)" 	1;
