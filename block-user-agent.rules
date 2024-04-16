@@ -19,7 +19,7 @@
 # Example the User-Agent name "someverybaduseragentname1" is entered as "(?:\b)someverybaduseragentname1(?:\b)"
 # Example the User-Agent name "some-very-bad-useragentname2" is entered as "(?:\b)some\-very\-bad\-useragentname1(?:\b)" 
 # the "(?:\b)" and "(?:\b)" are word boundaries which prevents partial matching and false positives.
-
+map $http_user_agent $badagent {
 	"~*(?:\b)01h4x.com(?:\b)"		3;
 	"~*(?:\b)360Spider(?:\b)"		3;
 	"~*(?:\b)404checker(?:\b)"		3;
@@ -679,3 +679,4 @@
 	"~*(?:\b)xpymep1.exe(?:\b)"		3;
 	"~*(?:\b)zauba.io(?:\b)"		3;
 	"~*(?:\b)zgrab(?:\b)"		3;
+}
