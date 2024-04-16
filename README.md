@@ -1,7 +1,7 @@
 **Run this before add logic to server block**
 
 
-Run .... chmod +x nginx-config.sh ....
+Run **chmod +x nginx-config.sh**
 Run **./nginx-config.sh**
 
 
