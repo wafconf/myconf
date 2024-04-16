@@ -2,7 +2,7 @@
 # is entered with a preceding (?:\b) and an ending (?:\b)
 # this makes it now "(?:\b)someveryveryrandomwebsitenamethatdoesnotexist1\.com(?:\b)". 
 # It is crucial to use the word boundaries regex formatting. 
-
+map $http_referer $bad_referer {
 	"~*(?:\b)000free\.us(?:\b)" 	1;
 	"~*(?:\b)007angels\.com(?:\b)" 	1;
 	"~*(?:\b)00author\.com(?:\b)" 	1;
@@ -7108,4 +7108,5 @@
 	"~*(?:\b)zytpirwai\.net(?:\b)" 	1;
 	"~*(?:\b)zzbroya\.com\.ua(?:\b)" 	1;
 	"~*(?:\b)zzlgxh\.com(?:\b)" 	1;
+}
 # END BAD REFERRERS ### DO NOT EDIT THIS LINE AT ALL ###
