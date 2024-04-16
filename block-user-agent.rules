@@ -1,5 +1,13 @@
 # Add One Entry Per Line - List all the extra bad User-Agents you want to permanently block or whitelist.
 
+###	SETTINGS: 
+### ---------------------------------------------
+###	0 = allowed - no limits
+###	1 = allowed or rate limited less restrictive
+###	2 = rate limited more
+###	3 = block completely
+### ---------------------------------------------
+
 # This is for User-Agents that are not included in the main list of the bot blocker
 # This file must exist on your system or Nginx will fail a reload due to a missing file
 # This allows you finer control of keeping certain bots blocked and automatic updates will
@@ -19,6 +27,8 @@
 # Example the User-Agent name "someverybaduseragentname1" is entered as "(?:\b)someverybaduseragentname1(?:\b)"
 # Example the User-Agent name "some-very-bad-useragentname2" is entered as "(?:\b)some\-very\-bad\-useragentname1(?:\b)" 
 # the "(?:\b)" and "(?:\b)" are word boundaries which prevents partial matching and false positives.
+
+
 map $http_user_agent $badagent {
 	"~*(?:\b)01h4x.com(?:\b)"		3;
 	"~*(?:\b)360Spider(?:\b)"		3;
